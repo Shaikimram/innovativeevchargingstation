@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EV Charging Station Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('s.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    
+    main {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+    }
+    
+    h2 {
+      font-size: 28px;
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    
+    section {
+      margin-bottom: 40px;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    li h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+    
+    li p {
+      margin: 0;
+      font-size: 16px;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EV Charging Station</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to our EV Charging Station</h2>
+      <p>Charge your electric vehicle with us and contribute to a greener future.</p>
+      <a href="#" class="btn" id="find-stations-btn">Find Charging Stations</a>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>These is the startup company with innovative design and ensure safety for your vehicle.Worth for your money. </p>
+    </section>
+
+    <section id="locations">
+      <h2>Our Locations</h2>
+      <ul>
+        <li>
+          <h3>Location 1</h3>
+                    <p>Address: VR.Sidhartha engineering coolege</p>
+          <p>Hours: 8am - 8pm</p>
+        </li>
+        <li>
+          <h3>Location 2</h3>
+          <p>Address: Benz circle</p>
+          <p>Hours: 9am - 7pm</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 EV Charging Station. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('find-stations-btn').addEventListener('click', function(event) {
+      event.preventDefault();
+      openGoogleMaps();
+    });
+
+    function openGoogleMaps() {
+      // Replace with your desired latitude and longitude coordinates
+      var latitude = 80.6892;
+      var longitude =16.4948;
+      var zoomLevel = 12;
+      var mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}&z=${zoomLevel}`;
+
+      window.open(mapUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
+
